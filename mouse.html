@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Mouse events</title>
+    <style>
+   body {
+            background-image: url('image.jpg'); /* Replace 'your-image.jpg' with the image file path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+       
+ #track {
+            background-color: goldenrod;
+            height: 200px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <p>Move your mouse to see its location.</p>
+    <div id="track"></div>
+    <p id="log"></p>
+
+    <script>
+        let track = document.querySelector('#track');
+        track.addEventListener('mousemove', (e) => {
+            let log = document.querySelector('#log');
+            log.innerText = `
+            Screen X/Y: (${e.screenX}, ${e.screenY})
+            Client X/Y: (${e.clientX}, ${e.clientY})`
+        });
+    </script>
+</body>
+</html>

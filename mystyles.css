@@ -1,0 +1,93 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+background-image:url("abcd.avif");
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  cursor: url(asd1.png), pointer;
+}
+h1{
+        font-size: 72px;
+        background: -webkit-linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+.container{
+    display: flex;
+    background-color:transparent;
+    cursor: url(asd1.png), pointer;
+}
+.btn{
+    background-color: black;
+    color: #ffffff;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    border-color: #ffffff;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 2px;
+    margin-left: 2px;
+    cursor: url(asd2.png), pointer;
+}
+.container1{
+    display: block;
+    background-image: url("cys3.jpg");
+    background-size: contain;
+    width: 750px;
+    height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    cursor: url(asd1.png), pointer;
+}
+h3{
+    color: #ffffff;
+}
+.cont2{
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("csw.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 400px;
+    cursor: url(asd1.png), pointer;
+}
+.cont3{
+    background-image: url("calc.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 400px;
+    cursor: url(asd1.png), pointer;
+}
+.cont4{
+    background-image: url("reg.avif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left:100px;
+    width: 600px;
+    height: 400px;
+    cursor: url(asd1.png), pointer;
+}
+.container3{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50px;
+    background-color: black;
+    display: block;
+    width:600px;
+    height: 1600px;
+    cursor: url(asd1.png), pointer;
+}
+label[for="honeypot"], #honeypot {
+    display: none;
+    visibility: hidden;
+  }

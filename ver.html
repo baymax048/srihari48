@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <title>Verification</title>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+    <link rel="stylesheet" href="mystyles.css">
+<style>
+        body {
+            background-image: url('17973908.jpg'); /* Add the URL of your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="height: 150px;">
+        <a href="amrita.html"><button class="btn" style="margin-left: 70px;" >HOME</button></a>
+    </div>
+    <div class="center">
+        <h1 style="font-family:'century gothic'">Captcha Validator</h1>
+        <div class="container3" style="width: 300px;height: 300px;background-color: aliceblue;margin-top: 10px;">
+            <h2 style="margin-bottom: 0%;text-decoration: dotted;font-family:'century gothic';">Captcha</h2>
+            <br>
+        <div id="captchaBackground" style="height: 250px;">
+            <div class="container3" style="width: 200px;height:fit-content;">
+          <span id="captcha" style="font-size: 30px;color: aliceblue;font-family:'century gothic';">captcha text</span>
+        </div>
+          <br>
+          <input id="textBox" type="text" name="text" style="height: 60px;font-size: 30px;width: 200px;">
+          <br>
+          
+          <div id="buttons" style="width: 300px;height:100px;">
+            <br>
+            <input id="submit" type="submit" value="Submit" style="height: 30px;width: 100px;" href="registrationform2.html">
+            <br>
+            <button id="refresh" type="submit" ><img src="refresh.png" style="height: 35px;width: 35px;"></button>
+        </div>
+          <span id="output"></span>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+       let captchaText = document.querySelector('#captcha');
+let userText = document.querySelector('#textBox');
+let submitButton = document.querySelector('#submit');
+let output = document.querySelector('#output');
+let refreshButton = document.querySelector('#refresh');
+
+let alphaNums = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+let emptyArr = [];
+for(let i = 1; i <= 7; i++) {
+	emptyArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
+}
+captchaText.innerHTML = emptyArr.join('');
+
+
+submitButton.addEventListener('click',  function() {
+	if(userText.value === captchaText.innerHTML) {
+		window.location.href = "registrationform2.html";
+	} else {
+		output.classList.add("redText");
+		output.innerHTML = "Incorrect, please try again";
+	}
+});
+
+refreshButton.addEventListener('click', function () {
+	userText.value = "";
+	let refreshArr = [];
+	for(let j = 1; j <= 7; j++) {
+		refreshArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
+	}
+	captchaText.innerHTML = refreshArr.join('');
+	output.innerHTML = "";
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('amrita-vishwa-vidyapeetham-chennaicampus-banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: rgba(194, 30, 86, 0.5); /* Use rgba to set background transparency */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.contact-info {
+    background-color: rgba(255, 255, 255, 0.5); /* Make the container semi-transparent */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    color: #C21E56;
+}
+
+
+
